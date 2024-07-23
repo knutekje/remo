@@ -6,6 +6,7 @@ import io.micronaut.core.annotation.*;
 import io.micronaut.serde.annotation.SerdeImport;
 import io.micronaut.serde.annotation.Serdeable;
 import jakarta.persistence.*;
+import lombok.NoArgsConstructor;
 
 
 
@@ -14,15 +15,17 @@ import jakarta.persistence.*;
 @Introspected
 @Table(name="book")
 @Serdeable.Serializable
-@SerdeImport(Book.class)
+//@SerdeImport(Book.class)
 @Serdeable.Deserializable
+@NoArgsConstructor
 public class Book {
     
-    public Book(long id, String title, String author) {
-        this.id = id;
-        this.title = title;
-        this.author = author;
-    }
+    
+    // public Book(long id, String title, String author) {
+    //     this.id = id;
+    //     this.title = title;
+    //     this.author = author;
+    // }
 
    
     @Id
