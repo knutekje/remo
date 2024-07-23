@@ -12,7 +12,7 @@ import jakarta.persistence.*;
 
 @jakarta.persistence.Entity
 @Introspected
-@Table(name="books")
+@Table(name="book")
 @Serdeable.Serializable
 @SerdeImport(Book.class)
 @Serdeable.Deserializable
